@@ -15,14 +15,16 @@
     
 </head>
 <body>
-    <div id="volcano_map"></div>
+    <h1> Table of Student and Grade </h1>
 
-    <script type="text/javascript">
-
-    var spec2 = "volcano_map.vg.json";
-    vegaEmbed('#volcano_map', spec2).then(function(result) {
-        // Access the Vega view instance (https://vega.github.io/vega/docs/api/view/) as result.view
-    }).catch(console.error);
-    </script>
+    <table border="1" cellpadding="10%">
+        <!--tr: a row-->
+        <tr>
+            <!--th: first heading row in the table-->
+            <th>First Name</th>
+            <th>Last Name</th>
+            <th>Grade</th>
+        </tr>
+    </table>
 </body>
 </html>
