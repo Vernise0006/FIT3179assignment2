@@ -1,0 +1,72 @@
+{
+  "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
+  "title": "Number of Volcanic Eruptions in Each Region",
+  "width": 350,
+  "height": 400,
+  "data": {
+    "name": "region_data",
+    "url": "https://raw.githubusercontent.com/Vernise0006/FIT3179assignment2/main/region_data.csv"
+  },
+  "layer": [
+    {
+      "selection": {
+        "ve_highlight": {
+          "type": "multi",
+          "fields": ["Region"],
+          "bind": "legend",
+          "on": "click",
+          "clear": "dbclick"
+        }
+      },
+      "mark": "bar",
+      "encoding": {
+        "y": {
+          "field": "Region",
+          "type": "ordinal",
+          "sort": "-x"
+        },
+        "x": {
+          "field": "RegionCount",
+          "title": "Number of Volcanic Eruptions",
+          "type": "quantitative"
+        },
+        "color": {
+          "condition": {"test": "datum.RegionCount == 197", "value": "red"},
+          "value": "#29a7d6"
+        },
+        "opacity": {
+          "condition": {"selection": "ve_highlight", "value": 1},
+          "value": 0.2
+        },
+        "tooltip": [
+          {"field": "Region", "type": "ordinal"},
+          {"field": "RegionCount", "type": "quantitative", "title": "Eruption Count"}
+        ]
+      }
+    },
+    {
+      "mark": {
+        "type": "text",
+        "align": "right",
+        "baseline": "middle",
+        "fontWeight": "bold",
+        "fontSize": 13,
+        "dx": -5
+      },
+      "encoding": {
+        "y": {
+          "field": "Region",
+          "type": "ordinal",
+          "sort": "-x"
+        },
+        "x": {
+          "field": "RegionCount",
+          "type": "quantitative"
+        },
+        "text": {
+          "condition": {"test": "datum.RegionCount == 197", "value": "197 Eruptions"}
+        }
+      }
+    }
+  ]
+}
