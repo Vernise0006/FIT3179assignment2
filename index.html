@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Global Volcanic Eruptions</title>
+    <title>FIT3179 Assignment 2</title>
 
     <!-- Import Vega & Vega-Lite (does not have to be from CDN) -->
     <script src="https://cdn.jsdelivr.net/npm/vega@5.22.1"></script>
@@ -13,16 +13,52 @@
     <!-- CSS file -->
     <link rel="stylesheet" type="text/css" href="styles.css" media="all">
     
+    <!-- Add pure.css library -->
+    <link rel="stylesheet" href="https://unpkg.com/purecss@2.0.3/build/pure-min.css"
+    integrity="sha384-cg6SkqEOCV1NbJoCu11+bm0NvBRc8IYLRGXkmNrqUBfTjmMYwNKPWBTIKyw9mHNJ" crossorigin="anonymous">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
 </head>
 <body>
-   <div id="volcano_map"></div>
+    <div class="page">
+        <div class="pure-g">
+            <div class="pure-u-1-1">
+                <h1 class="c-align">Global Volcanic Eruption</h1>
+                <p class="c-align">Throughout the years, volcanic eruptions happening all around the world have affect many lifes.</p>
+                <p class="c-align">Population living nearby volcanoes have a very high risk of being victims in an eruption.</p>
+                <p class="c-align">This could lead to many deaths, injuries, power outages, contaminations and lost of properties.</p>
+                <p class="c-align">In this visualisation, we will dive in and take a look on the different eruptions which happened</p>
+                <p class="c-align">around the world thoughout the years and its characteristics and statistics.</p>
+            </div>
+        </div>
+
+        <div class="pure-g">
+            <div class="pure-u-1-1">
+              <h2 class="c-align">Map of Volcanic Eruptions</h2>
+              <div id="volcano_map" class="map-container"></div>
+            </div>
+
+            <div class="pure-u-1-2">
+              <h2 class="c-align">Bar Chart of Number of Eruptions</h2>
+              <div id="eruption_count" class="vis-container"></div>
+            </div>
+
+            <div class="pure-u-1-2">
+              <h2 class="c-align">Visualisation 3 (TBA)</h2>
+            </div>
+        </div>
+    </div>
 
     <script type="text/javascript">
-
-    var spec2 = "volcano_map.vg.json";
-    vegaEmbed('#volcano_map', spec2).then(function(result) {
-        // Access the Vega view instance (https://vega.github.io/vega/docs/api/view/) as result.view
-    }).catch(console.error);
-    </script>
+        var spec1 = "volcano_map.vg.json";
+        vegaEmbed('#volcano_map', spec1).then(function(result1) {
+            // Access the Vega view instance for the first visualization as result1.view
+        }).catch(console.error);
+    
+        var spec2 = "eruption_count.vg.json";
+        vegaEmbed('#eruption_count', spec2).then(function(result2) {
+            // Access the Vega view instance for the second visualization as result2.view
+        }).catch(console.error);
+        </script>
 </body>
 </html>
