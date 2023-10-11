@@ -1,2 +1,6 @@
-"Total_Deaths_Sum","Total_Missing_Sum","Total_Injuries_Sum","Total_Damage_Mil_Sum","Total_Houses_Destroyed_Sum"
-333762,3739,49540,3797.264,41376
+"category","count"
+"Total_Deaths_Sum",333762
+"Total_Missing_Sum",3739
+"Total_Injuries_Sum",49540
+"Total_Damage_Mil_Sum",3797.264
+"Total_Houses_Destroyed_Sum",41376
