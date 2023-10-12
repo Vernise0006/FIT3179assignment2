@@ -1,0 +1,52 @@
+{
+    "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
+    "title": "Number of Volcanic Eruptions in Each Region",
+    "width": 900,
+    "height": 400,
+    "data": {
+      "name": "date_data",
+      "url": "https://raw.githubusercontent.com/Vernise0006/FIT3179assignment2/main/sorted_date.csv"
+    },
+    "layer": [
+      {
+        "mark": "circle",
+        "encoding": {
+          "x": {"field": "Last Known Eruption", "type": "quantitative"},
+          "y": {"field": "Elevation", "type": "quantitative"},
+          "color": {"value": "#02599c"},
+          "tooltip": [
+            {"field": "Name", "type": "nominal"},
+            {"field": "Country", "type": "nominal"},
+            {"field": "Elevation", "type": "quantitative"},
+            {"field": "Last Known Eruption", "type": "quantitative"}
+          ]
+        }
+      },
+      {
+        "mark": {
+          "type": "text",
+          "align": "right",
+          "baseline": "bottom",
+          "dx": 350,
+          "dy": 170,
+          "fontSize": 13,
+          "color": "red"
+        },
+        "encoding": {
+          "text": {
+            "value": ["Most Volcano Eruptions are", "recorded from year 1600 onwards"]
+          }
+        }
+      },
+      {
+        "mark": {
+          "type": "rule",
+          "color": "red"
+        },
+        "encoding": {
+          "y": {"datum": 0},
+          "size": {"value": 2}
+        }
+      }
+    ]
+  }  

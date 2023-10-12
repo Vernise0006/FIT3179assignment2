@@ -1,6 +1,6 @@
 /* Add background colour to entire html page */
 html, body {
-    background-color: #ecf9ff;
+    background-color: #d8c3af;
 }
 
 .c-align {
@@ -8,20 +8,59 @@ html, body {
 }
 
 h1 {
+    font-family: 'Lexend', sans-serif;
     text-align: center;
-    color: #945900;
-    font-size: 40px;
+    color: #242016;
+    font-size: 50px;
 }
 
 h2 {
+    font-family: 'Lexend', sans-serif;
     text-align: center;
-    color: #945900;
+    color: #3a322c;
     font-size: 30px;
+}
+
+h3 {
+    font-family: 'Lexend', sans-serif;
+    text-align: center;
+    color: #3a322c;
+    font-size: 25px;
+}
+
+p {
+    font-family: 'Lexend', sans-serif;
+    font-size: 15px;
+}
+
+.count-text {
+    font-size: 16px;
+    font-weight: bold;
+    color: red;
+}
+
+.type-text {
+    font-size: 16px;
+    font-weight: bold;
+    color: #82b5b1;
+}
+
+.bold-text {
+    font-size: 16px;
+    font-weight: bold;
+    color: #02599c;
+}
+
+.separator {
+    width: 100%;
+    border-top: 3px solid #242016;
+    margin-top: 20px;
+    margin-bottom: 20px;
 }
 
 .page {
     width: 1000px;
-    background-color: #ecf9ff;
+    background-color: #f4dcbc;
     margin: auto;
     padding-left: 30px;
     padding-right: 30px;
@@ -31,10 +70,35 @@ h2 {
 
 .map-container {
 	width: 100%;
-	padding-left: 100px
+	padding-left: 40px;
 }
 
-.vis-container {
+.splot-container {
 	width: 100%;
-	padding-top: 20px
+	padding-left: 10px;
+}
+
+.bar-vis-container {
+    width: 100%;
+    padding-left: 10px;
+}
+
+.pie-vis-container {
+    width: 100%;
+    padding-left: 32px;
+}
+
+.area-vis-container {
+    width: 100%;
+    padding-left: 10px;
+}
+
+.bar-text-container {
+    width: 450px;
+    padding-left: 20px;
+}
+
+.pie-text-container {
+    width: 450px;
+    padding-left: 20px;
 }

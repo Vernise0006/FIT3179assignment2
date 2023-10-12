@@ -1,0 +1,48 @@
+{
+    "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
+    "title": "Damages Caused by Volcanic Eruptions",
+    "width": 400,
+    "height": 400,
+    "data": {
+      "name": "effects_data",
+      "url": "https://raw.githubusercontent.com/Vernise0006/FIT3179assignment2/main/effects.csv"
+    },
+    "selection": {
+      "effect_highlight": {
+        "type": "multi",
+        "fields": ["category"],
+        "bind": "legend",
+        "on": "click",
+        "clear": "dbclick"
+      }
+    },
+    "mark": "bar",
+    "encoding": {
+      "x": {
+        "field": "category",
+        "type": "nominal",
+        "title": "Damage Types",
+        "axis": {
+          "labelAngle": 0
+        },
+        "sort": "-y"
+      },
+      "y": {
+        "field": "count",
+        "type": "quantitative",
+        "title": "Count"
+      },
+      "tooltip": [
+        {"field": "category", "type": "nominal"},
+        {"field": "count", "type": "quantitative"}
+      ],
+      "color": {
+        "condition": {"test": "datum.count == 333762", "value": "red"}
+      },
+      "opacity": {
+        "condition": {"selection": "effect_highlight", "value": 1},
+        "value": 0.2
+      }
+    }
+  }
+  

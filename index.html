@@ -18,33 +18,202 @@
     integrity="sha384-cg6SkqEOCV1NbJoCu11+bm0NvBRc8IYLRGXkmNrqUBfTjmMYwNKPWBTIKyw9mHNJ" crossorigin="anonymous">
     <meta name="viewport" content="width=device-width, initial-scale=1">
 
+    <!-- Links to use google font -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Lexend&display=swap" rel="stylesheet">
+
 </head>
 <body>
     <div class="page">
         <div class="pure-g">
             <div class="pure-u-1-1">
                 <h1 class="c-align">Global Volcanic Eruption</h1>
-                <p class="c-align">Throughout the years, volcanic eruptions happening all around the world have affect many lifes.</p>
-                <p class="c-align">Population living nearby volcanoes have a very high risk of being victims in an eruption.</p>
-                <p class="c-align">This could lead to many deaths, injuries, power outages, contaminations and lost of properties.</p>
-                <p class="c-align">In this visualisation, we will dive in and take a look on the different eruptions which happened</p>
-                <p class="c-align">around the world thoughout the years and its characteristics and statistics.</p>
+                <p class="c-align">Volcanoes are natural wonders that have fascinated and sometimes terrified us throughout history. 
+                    Since the early days, volcanic eruptions have been happening frequently everywhere around the world. 
+                    These natural events can vary greatly in size and impact, from small, relatively harmless outbursts to colossal explosions 
+                    that reshape landscapes and impact global climate. Volcanic eruptions can create new landforms while also 
+                    rejuvenating soil with mineral-rich volcanic ash. On the other hand, they can pose serious threats 
+                    to human communities, as lava flows, ashfall, pyroclastic flows, and volcanic gases can be extremely 
+                    destructive and deadly. Understanding the patterns and behaviors of volcanic eruptions is crucial for the safety of communities 
+                    living near active volcanoes. It also helps scientists, researchers and the community anticipate and mitigate the 
+                    potential hazards associated with these events.</p>
+                <p class="c-align">In this visualisation, we will dive into the world of volcanoes and look at 
+                    the different eruptions which happened around the world thoughout the years. We will also learn about their distribution and 
+                    characteristics of this natural phenomenon.</p>
             </div>
         </div>
+
+        <!-- Horizontal line separator -->
+        <div class="separator"></div>
 
         <div class="pure-g">
             <div class="pure-u-1-1">
               <h2 class="c-align">Map of Volcanic Eruptions</h2>
               <div id="volcano_map" class="map-container"></div>
+              <p class="c-align">
+                According to the map visualisation above, we can see that volcanic eruptions happen most frequently
+                at coastal areas. These are usually continental rift zones where tectonic plates are pulling apart, 
+                leading to the formation of rift valleys. Magma rises to fill the gaps, causing volcanic 
+                eruptions. That being said, volcanic eruptions can also occur in other geological settings, 
+                like between continents, underwater, etc. These locations are primarily associated with the 
+                Earth's tectonic plate boundaries and certain geologically active regions.
+              </p>
             </div>
+        </div>
 
+        <!-- Horizontal line separator -->
+        <div class="separator"></div>
+
+        <div class="pure-g">
             <div class="pure-u-1-2">
               <h2 class="c-align">Bar Chart of Number of Eruptions</h2>
-              <div id="eruption_count" class="vis-container"></div>
+              <div id="eruption_count" class="bar-vis-container"></div>
             </div>
 
             <div class="pure-u-1-2">
-              <h2 class="c-align">Visualisation 3 (TBA)</h2>
+              <h2 class="c-align">Pie Chart of Types of Volcanoes</h2>
+              <div id="volcano_type" class="pie-vis-container"></div>
+            </div>
+
+            <div class="pure-u-1-2">
+                <div class="bar-text-container">
+                    <p class="c-align">
+                        From the bar chart above, we can conclude that South America has the highest 
+                        number of volcanic eruptions up until now, with a total of <span class="count-text"> 197 </span> eruptions. 
+                        West Indies have the least number recorded, which is 17 volcanic eruptions.
+                    </p>
+                </div>
+            </div>
+
+            <div class="pure-u-1-2">
+                <div class="pie-text-container">
+                    <p class="c-align">
+                        According to the pie chart above, we can see that <span class="type-text"> Stratovolcano </span> 
+                        comprise nearly half of all recorded volcanoes. <span class="type-text"> Stratovolcanoes </span> are 
+                        characterized by their conical shape and are known for their explosive eruptions.
+                    </p>
+                </div>
+            </div>
+
+            <!-- Horizontal line separator -->
+            <div class="separator"></div>
+
+            <div class="pure-u-1-1">
+                <h2 class="c-align">Volcanic Eruptions Throughout The Years</h2>
+                <div id="eruption_date" class="splot-container"></div>
+                <p class="c-align">
+                    The scatterplot above shows the elevation of each volcanic eruption 
+                    throughout the years. The earliest recorded volcanic eruption dates 
+                    back to <span class="bold-text"> 10450 BCE </span>. Back then, not 
+                    many eruptions are recorded. However, due to the advanced technologies 
+                    and large databases, many more volcanic eruptions are recorded in the 
+                    <span class="bold-text"> year 1600 onwards </span>.
+                </p>
+                
+                <p class="c-align">
+                    The elevation of each volcano is recorded in this scatterplot as well. 
+                    From this visualisation, we can see that <span class="bold-text"> most </span> 
+                    of the volcanoes have <span class="bold-text"> positive elevation </span>. 
+                    This means that most volcanic eruptions recorded are from volcanoes situated 
+                    <span class="bold-text"> above sea level </span>. This does not mean that 
+                    there are more volcanoes on land compared to underwater, but since 
+                    underwater volcanoes are not easily observable, they are often overlooked 
+                    and not recorded into databases. On the other hand, volcanic eruptions above 
+                    sea level are often easily observed.
+                </p>
+            </div>
+
+            <!-- Horizontal line separator -->
+            <div class="separator"></div>
+
+            <div class="pure-u-1-1">
+                <h2 class="c-align">Area Chart of Volcanic Explosivity Index</h2>
+            </div>
+
+            <div class="pure-u-1-2">
+                <div id="eruption_vei" class="area-vis-container"></div>
+            </div>
+
+            <div class="pure-u-1-2">
+                <h3 class="c-align">What is VEI?</h3>
+                <p class="c-align">
+                    The <span class="bold-text"> Volcanic Explosivity Index (VEI) </span> 
+                    is a measure to quantify and 
+                    categorize the explosiveness and magnitude of volcanic eruptions 
+                    on a scale from <span class="bold-text"> 0 to 8 </span>. 
+                    A VEI of 0 corresponds to non-explosive 
+                    eruptions, often characterized by the effusion of lava, while 
+                    a VEI of 8 represents the most cataclysmic and devastating 
+                    volcanic eruptions, with the potential to have global 
+                    climatic effects.
+                </p>
+
+                <h3 class="c-align">What does the chart tells us?</h3>
+                <p class="c-align">
+                    The area chart shows that the VEI which has the 
+                    <span class="count-text"> highest number of eruptions </span> 
+                    is <span class="count-text"> 2 </span>. Most volcanic eruptions either 
+                    have a VEI of <span class="bold-text"> 2 or 3 </span>. Only few volcanic 
+                    eruptions have extreme VEI (0 or 8).
+                </p>
+            </div>
+
+            <!-- Horizontal line separator -->
+            <div class="separator"></div>
+
+            <div class="pure-u-1-1">
+                <h2 class="c-align">Bar Chart of Damages Caused by Volcanic Eruptions</h2>
+            </div>
+
+            <div class="pure-u-1-2">
+                <div id="eruption_effects" class="area-vis-container"></div>
+            </div>
+
+            <div class="pure-u-1-2">
+                <h3 class="c-align">Types of Damages</h3>
+                <p class="c-align">
+                    Volcanic eruptions can cause a range of devastating damages, including 
+                    <span class="bold-text"> loss of life, injuries, destruction of homes, and people going missing. </span> 
+                    Hot lava flows, pyroclastic flows, and volcanic gases can lead to fatalities. 
+                    Additionally, eruptions can cause injuries to those who are exposed to 
+                    ashfall, projectiles, or scalding gases. Volcanic eruptions also result in the 
+                    destruction of houses and infrastructure, including roads and utilities, due 
+                    to the sheer force of the eruptive events and the accumulation of volcanic 
+                    materials like ash and pumice. People may go missing due to the chaos and 
+                    disarray caused by eruptions, making it challenging for authorities to 
+                    account for everyone's safety.
+                </p>
+
+                <h3 class="c-align">What does the chart tells us?</h3>
+                <p class="c-align">
+                    The bar chart shows that the number of deaths are much more significant 
+                    compared to other damages. The total number of <span class="count-text"> deaths </span> 
+                    caused by volcanic eruptions is <span class="count-text"> 333762 </span>. 
+                    This shows that volcanic eruptions are usually very deathly and dangerous.
+                    
+                    Most volcanic eruptions either 
+                    have a VEI of <span class="bold-text"> 2 or 3 </span>. Only few volcanic 
+                    eruptions have extreme VEI (0 or 8).
+                </p>
+            </div>
+
+            <!-- Horizontal line separator -->
+            <div class="separator"></div>
+
+            <div class="pure-u-1-1">
+                <h2 class="c-align">Conclusion</h2>
+                <p class="c-align">
+                    This data visualization project has provided us with valuable insights 
+                    into the diverse forms of volcanic eruptions and their global distribution. 
+                    It has enhanced our understanding of the unique properties of these 
+                    eruptions and the extensive damages they can inflict on both our 
+                    communities and the surrounding landforms. In conclusion, volcanic 
+                    eruptions are a deathly natural phenomenon which cannot be avoided. 
+                    Nonetheless, through informed preparation and effective mitigation 
+                    strategies, we can significantly reduce the impact and protect lives 
+                    and resources in the face of these natural disasters.
+                </p>
             </div>
         </div>
     </div>
@@ -59,6 +228,26 @@
         vegaEmbed('#eruption_count', spec2).then(function(result2) {
             // Access the Vega view instance for the second visualization as result2.view
         }).catch(console.error);
-        </script>
+
+        var spec3 = "eruption_date.vg.json";
+        vegaEmbed('#eruption_date', spec3).then(function(result3) {
+            // Access the Vega view instance for the third visualization as result3.view
+        }).catch(console.error);
+
+        var spec4 = "volcano_types.vg.json";
+        vegaEmbed('#volcano_type', spec4).then(function(result4) {
+            // Access the Vega view instance for the fourth visualization as result4.view
+        }).catch(console.error);
+
+        var spec5 = "eruption_vei.vg.json";
+        vegaEmbed('#eruption_vei', spec5).then(function(result5) {
+            // Access the Vega view instance for the fifth visualization as result5.view
+        }).catch(console.error);
+
+        var spec6 = "eruption_effects.vg.json";
+        vegaEmbed('#eruption_effects', spec6).then(function(result6) {
+            // Access the Vega view instance for the sixth visualization as result6.view
+        }).catch(console.error);
+    </script>
 </body>
 </html>

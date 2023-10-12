@@ -1,0 +1,46 @@
+{
+    "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
+    "width": 400,
+    "height": 300,
+    "title": "Volcanic Explosivity Index (VEI) of Volcanic Eruptions",
+    "data": {
+      "name": "VEI count",
+      "url": "https://raw.githubusercontent.com/Vernise0006/FIT3179assignment2/main/grouped_vei.csv"},
+    "layer": [
+        {
+            "mark": "area",
+            "encoding": {
+            "x": {
+                "field": "VEI",
+                "type": "ordinal"
+            },
+            "y": {
+                "field": "VEIcount",
+                "type": "quantitative",
+                "title": "Number of eruptions"
+            },
+            "tooltip": [
+                {"field": "VEI", "type": "ordinal"},
+                {"field": "VEIcount", "type": "quantitative", "title": "Number of eruptions"}
+            ],
+            "color": {"value": "#02599c"}
+            }
+        },
+        {
+            "mark": {
+              "type": "text",
+              "align": "left",
+              "baseline": "top",
+              "dx": -170,
+              "dy": -140,
+              "fontSize": 13,
+              "color": "red"
+            },
+            "encoding": {
+              "text": {
+                "value": ["221 eruptions", "have VEI=2"]
+              }
+            }
+        }
+    ]
+  }

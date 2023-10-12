@@ -1,0 +1,28 @@
+{
+  "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
+  "title": "Type of Volcanoes",
+  "width": 300,
+  "height": 410,
+  "data": {
+    "name": "type_data",
+    "url": "https://raw.githubusercontent.com/Vernise0006/FIT3179assignment2/main/clean_types.csv"
+  },
+  "selection": {
+    "vt_highlight": {
+    "type": "multi",
+    "fields": ["Type"],
+    "bind": "legend",
+    "on": "click",
+    "clear": "dbclick"
+    }
+  },
+  "mark": {"type": "arc", "innerRadius": 50},
+  "encoding": {
+    "theta": {"field": "TypeCount", "type": "quantitative"},
+    "color": {"field": "Type", "type": "nominal"},
+    "opacity": {
+      "condition": {"selection": "vt_highlight", "value": 1},
+      "value": 0.2
+    }
+  }
+}

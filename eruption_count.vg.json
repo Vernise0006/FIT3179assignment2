@@ -1,8 +1,8 @@
 {
   "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
   "title": "Number of Volcanic Eruptions in Each Region",
-  "width": 350,
-  "height": 400,
+  "width": 300,
+  "height": 380,
   "data": {
     "name": "region_data",
     "url": "https://raw.githubusercontent.com/Vernise0006/FIT3179assignment2/main/region_data.csv"
