@@ -1,20 +1,10 @@
-"Type","TypeCount"
-"Caldera",97
-"Complex",55
-"Compound",14
-"Cone(s)",1
-"Crater rows",6
-"Explosion crater(s)",2
-"Fissure vent",18
-"Lava cone",4
-"Lava dome",50
-"Maar",21
-"Pyroclastic cone",117
-"Pyroclastic shield",8
-"Shield",164
-"Stratovolcano",722
-"Subglacial",6
-"Submarine",118
-"Tuff cone",12
-"Tuff ring(s)",1
-"Volcanic field",89
+Type,TypeCount
+Stratovolcano,722
+Shield,164
+Submarine,118
+Pyroclastic cone,117
+Caldera,97
+Volcanic field,89
+Complex,55
+Lava dome,50
+Others (11 types),93
