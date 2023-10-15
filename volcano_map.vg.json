@@ -1,45 +1,48 @@
 {
-    "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
-    "title": "Global Volcanic Eruptions",
-    "width": 800,
-    "height": 450,
-    "background": "aliceblue",
-    "projection": {
-      "type": "equalEarth"
+  "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
+  "title": "Global Volcanic Eruptions",
+  "width": 800,
+  "height": 450,
+  "projection": {
+    "type": "equalEarth"
+  },
+  "layer":[
+    {
+      "data": {"sphere": true},
+      "mark": {"type": "geoshape", "fill": "aliceblue", "stroke": "black"}
     },
-    "layer":[
-      {
-        "data": {
-          "name": "world",
-          "url": "https://raw.githubusercontent.com/Vernise0006/FIT3179assignment2/main/world-110m.json",
-          "format": {"type": "topojson", "feature": "countries"}
-        },
-        "mark": {"type": "geoshape", "fill": "mintcream", "stroke": "black"}
+    {
+      "data": {
+        "name": "world",
+        "url": "https://raw.githubusercontent.com/Vernise0006/FIT3179assignment2/main/world-110m.json",
+        "format": {"type": "topojson", "feature": "countries"}
       },
-      {
-        "data": {
-          "name": "volcanoEruptions",
-          "url": "https://raw.githubusercontent.com/Vernise0006/FIT3179assignment2/main/volcano-dataset.csv",
-          "format": {"type":  "csv"}
+      "mark": {"type": "geoshape", "fill": "mintcream", "stroke": "black"}
+    },
+    {
+      "data": {
+        "name": "volcanoEruptions",
+        "url": "https://raw.githubusercontent.com/Vernise0006/FIT3179assignment2/main/volcano-dataset.csv",
+        "format": {"type":  "csv"}
+      },
+      "mark": {"type": "circle", "color": "red"},
+      "encoding": {
+        "longitude": {"field": "Longitude", "type": "quantitative"},
+        "latitude": {"field": "Latitude", "type": "quantitative"},
+        "size": {"value": 70},
+        "color": {
+          "field": "Elevation (Meters)",
+          "type": "quantitative",
+          "scale": {
+            "scheme": "reds"
+          }
         },
-        "mark": {"type": "circle", "color": "red", "opacity": 0.25},
-        "encoding": {
-          "longitude": {"field": "Longitude", "type": "quantitative"},
-          "latitude": {"field": "Latitude", "type": "quantitative"},
-          "size": {"value": 70},
-          "color": {
-            "field": "Elevation (Meters)",
-            "type": "quantitative",
-            "scale": {
-              "scheme": "reds"
-            }
-          },
-          "tooltip": [
-            {"field": "Name"},
-            {"field": "Country"},
-            {"field": "Elevation (Meters)"}
-          ]
-        }
+        "tooltip": [
+          {"field": "Name"},
+          {"field": "Country"},
+          {"field": "Elevation (Meters)"}
+        ]
       }
-    ]
-  }
+    }
+  ]
+}

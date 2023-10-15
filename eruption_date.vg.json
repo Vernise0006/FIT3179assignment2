@@ -1,52 +1,85 @@
 {
-    "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
-    "title": "Number of Volcanic Eruptions in Each Region",
-    "width": 900,
-    "height": 400,
-    "data": {
-      "name": "date_data",
-      "url": "https://raw.githubusercontent.com/Vernise0006/FIT3179assignment2/main/sorted_date.csv"
+  "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
+  "title": "Volcanic Eruptions' Elevations Throughout The Years",
+  "width": 900,
+  "height": 400,
+  "data": {
+    "name": "date_data",
+    "url": "https://raw.githubusercontent.com/Vernise0006/FIT3179assignment2/main/sorted_date.csv"
+  },
+  "layer": [
+    {
+      "params": [
+        {
+          "name": "grid",
+          "select": "interval",
+          "bind": "scales"
+        }
+      ],
+      "mark": "circle",
+      "encoding": {
+        "x": {
+          "field": "Last Known Eruption", 
+          "type": "quantitative",
+          "scale": {"domain": [-11000, 2500]}
+        },
+        "y": {
+          "field": "Elevation", 
+          "type": "quantitative",
+          "scale": {"domain": [-5000, 7000]}
+        },
+        "color": {"value": "#02599c"},
+        "tooltip": [
+          {"field": "Name", "type": "nominal"},
+          {"field": "Country", "type": "nominal"},
+          {"field": "Elevation", "type": "quantitative"},
+          {"field": "Last Known Eruption", "type": "quantitative"}
+        ]
+      }
     },
-    "layer": [
-      {
-        "mark": "circle",
-        "encoding": {
-          "x": {"field": "Last Known Eruption", "type": "quantitative"},
-          "y": {"field": "Elevation", "type": "quantitative"},
-          "color": {"value": "#02599c"},
-          "tooltip": [
-            {"field": "Name", "type": "nominal"},
-            {"field": "Country", "type": "nominal"},
-            {"field": "Elevation", "type": "quantitative"},
-            {"field": "Last Known Eruption", "type": "quantitative"}
-          ]
-        }
+    {
+      "mark": {
+        "type": "text",
+        "align": "right",
+        "baseline": "bottom",
+        "dx": 350,
+        "dy": 170,
+        "fontSize": 15,
+        "color": "red"
       },
-      {
-        "mark": {
-          "type": "text",
-          "align": "right",
-          "baseline": "bottom",
-          "dx": 350,
-          "dy": 170,
-          "fontSize": 13,
-          "color": "red"
+      "encoding": {
+        "text": {
+          "value": ["Most Volcano Eruptions are", "recorded from year 1600 onwards"]
         },
-        "encoding": {
-          "text": {
-            "value": ["Most Volcano Eruptions are", "recorded from year 1600 onwards"]
-          }
-        }
+        "x": {"signal": "grid.x"},
+        "y": {"signal": "grid.y"}
+      }
+    },
+    {
+      "mark": {
+        "type": "text",
+        "align": "left",
+        "baseline": "bottom",
+        "dx": -400,
+        "dy": -140,
+        "fontSize": 15,
+        "color": "red"
       },
-      {
-        "mark": {
-          "type": "rule",
-          "color": "red"
-        },
-        "encoding": {
-          "y": {"datum": 0},
-          "size": {"value": 2}
+      "encoding": {
+        "text": {
+          "value": ["Most eruptions are", "above sea level"]
         }
       }
-    ]
-  }  
+    },
+    {
+      "mark": {
+        "type": "rule",
+        "color": "red"
+      },
+      "encoding": {
+        "y": {"datum": 0},
+        "size": {"value": 2}
+      }
+    }
+  ]
+}

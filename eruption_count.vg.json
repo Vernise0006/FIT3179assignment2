@@ -23,7 +23,7 @@
         "y": {
           "field": "Region",
           "type": "ordinal",
-          "sort": "-x"
+          "sort": null
         },
         "x": {
           "field": "RegionCount",
@@ -57,7 +57,7 @@
         "y": {
           "field": "Region",
           "type": "ordinal",
-          "sort": "-x"
+          "sort": null
         },
         "x": {
           "field": "RegionCount",
