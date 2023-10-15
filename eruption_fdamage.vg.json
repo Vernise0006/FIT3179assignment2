@@ -1,0 +1,49 @@
+{
+    "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
+    "title": "Cummulative Financial Damage by Volcanic Eruptions",
+    "width": 900,
+    "height": 350,
+    "data": {
+      "name": "date_data",
+      "url": "https://raw.githubusercontent.com/Vernise0006/FIT3179assignment2/main/money_damage.csv"
+    },
+    "encoding": {
+      "x": {"field": "Year", "type": "temporal"},
+      "y": {"field": "cf_damage", "type": "quantitative", "title": "Total Damage (Million $)"}
+    },
+    "layer": [
+      {
+        "mark": "line"
+      },
+      {
+        "params": [{
+          "name": "hover",
+          "select": {"type": "point", "on": "mouseover", "clear": "mouseout"}
+        }],
+        "mark": {"type": "circle", "tooltip": true},
+        "encoding": {
+          "opacity": {
+            "condition": {"test": {"param": "hover", "empty": false}, "value": 1},
+            "value": 0
+          },
+          "size": {
+            "condition": {"test": {"param": "hover", "empty": false}, "value": 80},
+            "value": 100
+          },
+          "tooltip": [
+            {"field": "Year", "type": "temporal"},
+            {"field": "cf_damage", "type": "quantitative", "title": "Total Damage (Million $)"}
+          ]
+        }
+      },
+      {
+        "mark": {"type": "text", "align": "left", "baseline": "bottom", "dx": -150, "dy": -25, "fontSize": 15, "color": "#c40a0a"},
+        "encoding": {
+          "text": {"value": ["The St.Helens volcano eruption", "caused TWO billion dollars of", "financial damage to the USA -->"]},
+          "x": {"datum": 1980},
+          "y": {"datum": 2000}
+        }
+      }
+    ]
+  }
+  
