@@ -3,16 +3,29 @@ html, body {
     background-color: #d8c3af;
 }
 
-.c-align {
+.t-align{
     text-align: center;
 }
 
-h1 {
-    font-family: 'Lexend', sans-serif;
+.c-align {
+    text-align: left;
+}
+
+.big-title-text {
+    font-family: 'Young Serif', serif;
     text-align: center;
     color: #242016;
     font-size: 50px;
 }
+
+ /*
+h1 {
+    font-family: 'Lexend', sans-serif;
+    text-align: center;
+    color: #242016;
+    font-size: larger;
+}
+*/
 
 h2 {
     font-family: 'Lexend', sans-serif;
@@ -42,13 +55,31 @@ p {
 .type-text {
     font-size: 16px;
     font-weight: bold;
-    color: #82b5b1;
+    color: #5677a4;
 }
 
 .bold-text {
     font-size: 16px;
     font-weight: bold;
     color: #02599c;
+}
+
+.map-text {
+    font-size: 16px;
+    font-weight: bold;
+    color: #de2828;
+}
+
+.line-text {
+    font-size: 16px;
+    font-weight: bold;
+    color: #c40a0a;
+}
+
+.scatter-text {
+    font-size: 13px;
+    font-style: italic;
+    color: grey;
 }
 
 .separator {

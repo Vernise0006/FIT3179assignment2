@@ -22,22 +22,28 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Lexend&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Young+Serif&display=swap" rel="stylesheet">
 
 </head>
 <body>
     <div class="page">
+
+        <div class="pure-u-1-1">
+            <h1 class="big-title-text">Global Volcanic Eruption</h1>
+        </div>
+
         <div class="pure-g">
             <div class="pure-u-1-1">
-                <h1 class="c-align">Global Volcanic Eruption</h1>
                 <p class="c-align">Volcanoes are natural wonders that have fascinated and sometimes terrified us throughout history. 
                     Since the early days, volcanic eruptions have been happening frequently everywhere around the world. 
                     These natural events can vary greatly in size and impact, from small, relatively harmless outbursts to colossal explosions 
-                    that reshape landscapes and impact global climate. Volcanic eruptions can create new landforms while also 
-                    rejuvenating soil with mineral-rich volcanic ash. On the other hand, they can pose serious threats 
-                    to human communities, as lava flows, ashfall, pyroclastic flows, and volcanic gases can be extremely 
-                    destructive and deadly. Understanding the patterns and behaviors of volcanic eruptions is crucial for the safety of communities 
+                    that reshape landscapes and impact global climate.
+                </p>
+                <p class="c-align"> 
+                    Understanding the patterns and behaviors of volcanic eruptions is crucial for the safety of communities 
                     living near active volcanoes. It also helps scientists, researchers and the community anticipate and mitigate the 
-                    potential hazards associated with these events.</p>
+                    potential hazards associated with these events.
+                </p>
                 <p class="c-align">In this visualisation, we will dive into the world of volcanoes and look at 
                     the different eruptions which happened around the world thoughout the years. We will also learn about their distribution and 
                     characteristics of this natural phenomenon.</p>
@@ -49,15 +55,17 @@
 
         <div class="pure-g">
             <div class="pure-u-1-1">
-              <h2 class="c-align">Map of Volcanic Eruptions</h2>
+              <h2 class="t-align">Map Of Volcanic Eruptions</h2>
               <div id="volcano_map" class="map-container"></div>
               <p class="c-align">
                 According to the map visualisation above, we can see that volcanic eruptions happen most frequently
-                at coastal areas. These are usually continental rift zones where tectonic plates are pulling apart, 
+                at <span class="map-text"> coastal areas </span>. These are usually continental rift zones where tectonic plates are pulling apart, 
                 leading to the formation of rift valleys. Magma rises to fill the gaps, causing volcanic 
-                eruptions. That being said, volcanic eruptions can also occur in other geological settings, 
-                like between continents, underwater, etc. These locations are primarily associated with the 
-                Earth's tectonic plate boundaries and certain geologically active regions.
+                eruptions.
+                </p>
+                <p class="c-align">
+                That being said, volcanic eruptions can also occur in other geological settings, 
+                like between continents, underwater, etc.
               </p>
             </div>
         </div>
@@ -67,12 +75,12 @@
 
         <div class="pure-g">
             <div class="pure-u-1-2">
-              <h2 class="c-align">Bar Chart of Number of Eruptions</h2>
+              <h2 class="t-align">Bar Chart Of Eruptions Count</h2>
               <div id="eruption_count" class="bar-vis-container"></div>
             </div>
 
             <div class="pure-u-1-2">
-              <h2 class="c-align">Pie Chart of Types of Volcanoes</h2>
+              <h2 class="t-align">Pie Chart Of Types Of Volcanoes</h2>
               <div id="volcano_type" class="pie-vis-container"></div>
             </div>
 
@@ -100,8 +108,13 @@
             <div class="separator"></div>
 
             <div class="pure-u-1-1">
-                <h2 class="c-align">Volcanic Eruptions Throughout The Years</h2>
+                <h2 class="t-align">Scatterplot Of Volcanic Eruptions Throughout The Years</h2>
                 <div id="eruption_date" class="splot-container"></div>
+                <p class="t-align">
+                    <span class="scatter-text">
+                        *Negative years = BCE ; Positive Years = CE*
+                    </span>
+                </p>
                 <p class="c-align">
                     The scatterplot above shows the elevation of each volcanic eruption 
                     throughout the years. The earliest recorded volcanic eruption dates 
@@ -128,7 +141,7 @@
             <div class="separator"></div>
 
             <div class="pure-u-1-1">
-                <h2 class="c-align">Area Chart of Volcanic Explosivity Index</h2>
+                <h2 class="t-align">Area Chart Of Volcanic Explosivity Index</h2>
             </div>
 
             <div class="pure-u-1-2">
@@ -136,7 +149,7 @@
             </div>
 
             <div class="pure-u-1-2">
-                <h3 class="c-align">What is VEI?</h3>
+                <h3 class="t-align">What is VEI?</h3>
                 <p class="c-align">
                     The <span class="bold-text"> Volcanic Explosivity Index (VEI) </span> 
                     is a measure to quantify and 
@@ -149,7 +162,7 @@
                     climatic effects.
                 </p>
 
-                <h3 class="c-align">What does the chart tells us?</h3>
+                <h3 class="t-align">What does the chart tells us?</h3>
                 <p class="c-align">
                     The area chart shows that the VEI which has the 
                     <span class="count-text"> highest number of eruptions </span> 
@@ -163,7 +176,7 @@
             <div class="separator"></div>
 
             <div class="pure-u-1-1">
-                <h2 class="c-align">Bar Chart of Damages Caused by Volcanic Eruptions</h2>
+                <h2 class="t-align">Bar Chart Of Damages Caused By Volcanic Eruptions</h2>
             </div>
 
             <div class="pure-u-1-2">
@@ -171,7 +184,7 @@
             </div>
 
             <div class="pure-u-1-2">
-                <h3 class="c-align">Types of Damages</h3>
+                <h3 class="t-align">Types Of Damages</h3>
                 <p class="c-align">
                     Volcanic eruptions can cause a range of devastating damages, including 
                     <span class="bold-text"> loss of life, injuries, destruction of homes, and people going missing. </span> 
@@ -185,7 +198,7 @@
                     account for everyone's safety.
                 </p>
 
-                <h3 class="c-align">What does the chart tells us?</h3>
+                <h3 class="t-align">What does the chart tells us?</h3>
                 <p class="c-align">
                     The bar chart shows that the number of deaths are much more significant 
                     compared to other damages. The total number of <span class="count-text"> deaths </span> 
@@ -202,13 +215,33 @@
             <div class="separator"></div>
 
             <div class="pure-u-1-1">
-                <h2 class="c-align">Conclusion</h2>
+                <h2 class="t-align">Line Chart Of Total Financial Damage</h2>
+                <div id="eruption_fdamage" class="splot-container"></div>
+                <p class="c-align">
+                    The line chart above shows the cummulative financial damage by volcanic eruptions since year 1914. 
+                    The greatest lost caused by a volcanic eruption is <span class="line-text"> 2 billion dollars </span>. 
+                    This eruption is by a volcano in <span class="line-text"> The USA </span>, named <span class="line-text"> St. Helens </span>. 
+                    </p>
+                    <p class="c-align">
+                    The St. Helens volcanic blast killed 57 people and spewed 520 million tons of ash across the country.
+                    </p>
+                </p>
+            </div>
+
+            <!-- Horizontal line separator -->
+            <div class="separator"></div>
+
+            <div class="pure-u-1-1">
+                <h2 class="t-align">Conclusion</h2>
                 <p class="c-align">
                     This data visualization project has provided us with valuable insights 
                     into the diverse forms of volcanic eruptions and their global distribution. 
                     It has enhanced our understanding of the unique properties of these 
                     eruptions and the extensive damages they can inflict on both our 
-                    communities and the surrounding landforms. In conclusion, volcanic 
+                    communities and the surrounding landforms.
+                    </p>
+                    <p class="c-align">
+                    In conclusion, volcanic 
                     eruptions are a deathly natural phenomenon which cannot be avoided. 
                     Nonetheless, through informed preparation and effective mitigation 
                     strategies, we can significantly reduce the impact and protect lives 
@@ -247,6 +280,11 @@
         var spec6 = "eruption_effects.vg.json";
         vegaEmbed('#eruption_effects', spec6).then(function(result6) {
             // Access the Vega view instance for the sixth visualization as result6.view
+        }).catch(console.error);
+
+        var spec7 = "eruption_fdamage.vg.json";
+        vegaEmbed('#eruption_fdamage', spec7).then(function(result7) {
+            // Access the Vega view instance for the seventh visualization as result7.view
         }).catch(console.error);
     </script>
 </body>
